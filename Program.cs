@@ -1,15 +1,12 @@
-﻿         int senha;
+﻿      Console.Write("Informe uma nota de 0 a 10: ");
+double nota = double.Parse(Console.ReadLine());
 
-        Console.Write("Informe a senha: ");
-        senha = int.Parse(Console.ReadLine());
+while (nota < 0 || nota > 10)
+{
+    Console.WriteLine("Nota inválida. Informe novamente.");
 
-        while (senha != 1234)
-        {
-            Console.WriteLine("Senha incorreta. Tente novamente.");
+    Console.Write("Informe uma nota de 0 a 10: ");
+    nota = double.Parse(Console.ReadLine());
+}
 
-            Console.Write("Informe a senha: ");
-            senha = int.Parse(Console.ReadLine());
-        }
-
-        Console.WriteLine("Acesso permitido.");
-    
+Console.WriteLine("Nota registrada: " + nota);
